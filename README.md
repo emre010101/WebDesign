@@ -1,2 +1,7 @@
-# WebDesign
-It's a project of college students who are geeks of their minds.
+# Web-Design-class
+
+Client Side programming Lauguage class
+
+## Live Demo
+
+> Github Page (https://anykms729.github.io/Web-Design-class/index.html)

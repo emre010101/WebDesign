@@ -1,0 +1,336 @@
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+ @import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
+
+ * {
+   box-sizing: border-box;
+   /* when add padding or any border onto an 
+     element, it doesn't actually affect the width of it.*/
+   margin: 0;
+   padding: 0;
+ }
+
+ .hm-body {
+   font-family: 'Mada', sans-serif !important;
+   color: #222;
+   padding-bottom: 10px !important;
+   overflow-x: hidden;
+   z-index: 5;
+ }
+
+ .hm-container {
+   max-width: 1200px !important;
+   margin: 0 auto !important;
+ }
+
+ .hm-nav {
+   position: fixed;
+   background-color: #222;
+   top: 0;
+   left: 0;
+   right: 0;
+   transition: all 0.3s ease-in-out;
+   z-index: 3214;
+ }
+
+ .hm-nav .hm-container {
+   display: flex;
+   justify-content: space-between;
+   /*to give space for each item*/
+   align-items: center;
+   padding: 20px 0;
+   /*avoid boostrap apply*/
+   transition: all 0.3s ease-in-out;
+   /*when scrolling it will give nice ease transation effect*/
+ }
+
+ .hm-nav .hm-ul {
+   display: flex;
+   list-style-type: none !important;
+   align-items: center !important;
+   justify-content: center !important;
+ }
+
+ .hm-nav .hm-a {
+   color: #fff;
+   text-decoration: none;
+   padding: 7px 15px !important;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .hm-nav.active {
+   background: #fff;
+   /*when is page scrolled the color of nav bar will change*/
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .hm-nav.active .hm-a {
+   /**/
+   color: #000;
+ }
+
+ .hm-nav.active .hm-container {
+   /*when it's not displaying padding will be smaller*/
+   padding: 10px 0 !important;
+ }
+
+ .hm-nav a.current,
+ .hm-nav .hm-a:hover {
+   color: #c0392b;
+   font-weight: bold;
+ }
+
+ .hm-container .hm-icon {
+   display: none;
+ }
+
+ /* When the screen is less than 920 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the topnav (.icon) */
+ @media screen and (max-width: 920px) {
+   ul li:not(:last-child) {
+     display: none;
+     transition: all 0.3s ease-in-out;
+   }
+
+   .hm-nav .hm-icon {
+     display: block !important;
+     color: #fff;
+     width: 25px;
+     height: 25px;
+     margin-right: 45px;
+     font-size: 25px;
+   }
+
+   .hm-nav.media .hm-icon {
+     font-size: 15px;
+     margin-right: 15px
+   }
+
+   .hm-nav.media li {
+     display: block;
+     font-size: xx-small;
+     list-style-type: none;
+     /*align-items: center;*/
+     /*justify-content: center;*/
+     /*width: 100vh;*/
+   }
+
+   .hm-nav.media .hm-container {
+     display: block;
+     padding: 40px 0;
+     /*check*/
+     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+     /*justify-content: space-around; /*if use, content stay up */
+     /*flex-wrap: wrap !important;*/
+   }
+ }
+
+ .hm-hero {
+   background-image: url('https://images.unsplash.com/photo-1543333995-a78aea2eee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+   height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: bottom center;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   position: relative;
+   margin-bottom: 20px;
+   z-index: -2;
+ }
+
+ .hm-hero::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: -1;
+ }
+
+ .hm-hero .hm-logo {
+   font-size: 46px;
+   margin: -20px 0 20px;
+ }
+
+ .hm-pcontainer {
+   display: flex;
+   width: 100vw;
+   background-color: #AFEEEE;
+   opacity: 0.9;
+ }
+
+ .hm-panel {
+   background-size: auto 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 80vh;
+   border-radius: 50px;
+   cursor: pointer;
+   /*cursor will be pointing when hovering over*/
+   flex: 0.6;
+   margin: 10px;
+   /*seperating them to each other*/
+   position: relative;
+   /**/
+   transform: flex 0.7 ease-in;
+ }
+
+ .hm-panel.active {
+   flex: 4;
+ }
+
+ @media (max-width: 920px) {
+   .hm-container {
+     width: 100vw;
+   }
+
+   .hm-panel:nth-of-type(4),
+   .hm-panel:nth-of-type(5) {
+     display: none;
+     /*when the screen small it wont display 4th nd 5th*/
+     transition: all 0.3 ease-in-out;
+   }
+ }
+
+ .visa-body {
+   background-image: url(./img/visa-image1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   position: relative;
+   z-index: -2;
+   overflow-y: hidden;
+   overflow-x: hidden;
+   font-family: 'Mada', sans-serif;
+ }
+
+ .visa-body::before {
+   content: '';
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: -1;
+ }
+
+ .visa-h1 {
+   margin-bottom: 30px;
+ }
+
+ .visa-p {
+   font-size: larger;
+ }
+
+
+ .visa-box {
+   border-radius: 10px;
+   margin-top: 10%;
+ }
+
+ .visa-box.box1,
+ .visa-box.box2,
+ .visa-box.box3,
+ .visa-box.box4,
+ .visa-box.box5 {
+   margin: 25px;
+   background-color: rgba(191, 191, 191, 0.895);
+   opacity: 0.9;
+   padding: 16px;
+ }
+
+ .box1,
+ .box2,
+ .box3,
+ .box4,
+ .box5 {
+   width: 230px;
+   height: 260px;
+   display: inline-block;
+   text-align: center;
+   vertical-align:top;
+   border-radius: 10px;
+   box-sizing: border-box;
+   padding: 100px;
+ }
+
+ .box1:hover,
+ .box2:hover,
+ .box3:hover,
+ .box4:hover,
+ .box5:hover {
+   opacity: 0.4;
+   transform: scale(1.2);
+ }
+
+
+ .visa-content {
+   margin-top: 20%;
+   margin-bottom: 5%;
+ }
+
+
+ .visa-button {
+   background-color: black;
+   color: black;
+   font-size: large;
+   padding: 20px 30px;
+   margin-bottom: 200px;
+   border-radius: 10px;
+}
+
+.visa-button a:visited { 
+  color: white; 
+ }
+
+
+ .visa-button:hover {
+
+   opacity: 0.4;
+   transform: scale(1.2);
+ }
+
+ @media (max-width: 930px) {
+
+   .box1,
+   .box2,
+   .box3,
+   .box4,
+   .box5,
+   .box6 {
+     height: auto;
+     display: inline-block;
+     width: 400px;
+     margin-top: auto;
+   }
+
+   .visa-p {
+     font-size: 10px;
+   }
+
+   .visa-button {
+     font-size: 10px;
+     padding: 10px 10px;
+     display: flex;
+     flex-direction: column;
+     display: inline-block;
+     margin-bottom: 100px;
+   }
+
+   .visa-content {
+     overflow-x: scroll;
+     overflow-y: scroll;
+   }
+
+   .visa-palet {
+     flex-direction: row;
+   }
+ }

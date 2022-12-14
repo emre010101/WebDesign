@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css"/> <!--Main Css-->
+    <link rel="stylesheet" href="bootstrap-iso.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KometCare - Contact us</title>
+    <!-- Navbar icon -->
+</head>
+<body id="contact-us">
+<div class="hm-body">  <!--Body tag has been replaced with div so as to avoid to use nav bar in the other pages -->
+    <nav class="hm-nav">
+        <div class="hm-container">
+            <h1 class="hm-logo"><a class="hm-a" href="index.html">KometCare</a></h1>
+            <ul class="hm-ul">
+                <li><a href="index.html" class="hm-a">Home</a></li> <!--(EmresPage) -->
+                <li><a href="aboutus.html" class="hm-a">About</a></li>
+                <!--(IrenesPAge)current class is used to higlight the content it will change in every page -->
+                <li><a href="eligibility-requirement.html" class="hm-a">Eligibility Requirement</a></li>
+                <!--(JinniesPage)-->
+                <li><a href="VisaRequirements.html" class="hm-a">VISA Requirement</a></li> <!-- (EmresPage)-->
+                <li><a href="generalInfo.html" class="hm-a">General Information</a></li> <!--(MisosPage)-->
+                <li><a href="employment.html" class="hm-a">Employment</a></li> <!--(JinniesPage)-->
+                <li><a href="salaryDetail.html" class="hm-a">Salary Details</a></li> <!--(MisosPage)-->
+                <li><a href="contactus.html" class="hm-a  current">Contact</a></li> <!--(IrenesPage)-->
+                <li><a href="javascript:void(0);" class="hm-icon" onclick="hmopennav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="bootstrap-iso">
+    <div class="contact-para container">
+        <h2>Contact Us</h2>
+        <p class="lead"> We would love to hear from you. Please fill in the form below or give us a call directly
+            if you require further information about out Services.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-4">Application Form</h2>
+            <div class="col-md-3"></div>
+            <h2 class="col-md-4">Contact Information</h2>
+        </div>
+        <form onsubmit="return check()">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="fullname">FullName:</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">PhoneNumber:</label>
+                        <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone"
+                               placeholder="xxx-xxx-xxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descriptions:</label>
+                        <textarea class="form-control input-lg" id="description"></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <div class="container">
+                        <div class="contactInfo">
+                            <div class="box">
+                                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="text">
+                                    <h3>Address</h3>
+                                    <p><b>Mayor Street,<br>Dublin 1,Ireland,<br> D01 K6W2</b></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                <div class="text">
+                                    <h3>Phone</h3>
+                                    <p><b>+353 857563829</b></p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></i></div>
+                                <div class="text">
+                                    <h3>Email</h3>
+                                    <p><b>info@kometcare.com</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="js/form.js"></script><!--JavaScript for form validation-->
+<script src="js/script.js"></script> <!--JavaScriptforNavBar-->
+</body>
+</html>
