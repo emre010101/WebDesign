@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
+
+*{
+    box-sizing: border-box; /* when add padding or any border onto an
+     element, it doesn't actually affect the width of it.*/
+    margin: 0;
+    padding: 0;
+}
+
+.hm-body {
+    font-family: 'Mada', sans-serif !important;
+    color: #222;
+    padding-bottom: 10px !important;
+    overflow-x: hidden;
+    z-index: 5;
+}
+
+.hm-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.hm-nav {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0 ;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 3214;
+}
+
+.hm-nav .hm-container {
+    display: flex ;
+    justify-content: space-between; /*to give space for each item*/
+    align-items: center;
+    padding: 20px 0; /*avoid boostrap apply*/
+    transition: all 0.3s ease-in-out; /*when scrolling it will give nice ease transation effect*/
+}
+
+.hm-nav .hm-ul {
+    display: flex;
+    list-style-type: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.hm-nav .hm-a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.hm-nav.active {
+    background: #fff; /*when is page scrolled the color of nav bar will change*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hm-nav.active .hm-a { /**/
+    color: #000;
+}
+
+.hm-nav.active .hm-container { /*when it's not displaying padding will be smaller*/
+    padding: 10px 0 !important;
+}
+
+.hm-nav a.current,
+.hm-nav .hm-a:hover {
+    color: #c0392b;
+    font-weight: bold;
+}
+.hm-container .hm-icon{
+    display: none;
+}
+/* When the screen is less than 920 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 920px) {
+    ul li:not(:last-child) {
+        display: none;
+        transition: all 0.3s ease-in-out;    
+    }
+    
+    .hm-nav .hm-icon{
+        display: block !important;
+        color: rgb(220,20,60);
+        width: 25px;
+        height: 25px;
+        margin-right: 45px;
+        font-size: 25px;
+    }
+
+    .hm-nav.media .hm-icon{
+        font-size: 15px;
+        margin-right: 15px
+    }
+    .hm-nav.media li{
+        display: block;
+        font-size: xx-small;
+        list-style-type: none;
+    }
+
+    .hm-nav.media .hm-container{
+        display: block;
+        padding: 40px 0; /*check*/
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+/* Set background and element of body */
+.visa-body {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../img/visa-irene.jpg);
+    background-size: cover;
+}
+/* Set bacground and size of body */
+.visa-body::before {
+    content: '';
+    position: fixed;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.visa-content {
+    padding-top: 40px;
+}
+/* Set size and position of title */
+
+.visa-body h1{
+    text-align: center;
+    color: white;
+}
+.visa-body p {
+    color: white;
+}
+/* Set size and position of button */
+.visa-body button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    text-decoration: none;
+    margin-top: 30px;
+}
+/* Set the format of four boxes */
+.box1,.box2,.box3,.box4 {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url(../img/visa-irene.jpg);
+    transition: transform 0.5s;
+}
+.box5 {
+    padding-top: 60px;
+}
+/* hover was used on the first four boxes */
+.box1:hover {
+    transform: translateY(-10px);
+}
+.box2:hover {
+    transform: translateY(-10px);
+}
+.box3:hover {
+    transform: translateY(-10px);
+}
+.box4:hover {
+    transform: translateY(-10px);
+}
+
+/* When the screen is less than 920 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 920px) {
+    ul li:not(:last-child) {
+        display: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hm-nav .hm-icon {
+        display: block !important;
+        color: rgb(220, 20, 60);
+        width: 25px;
+        height: 25px;
+        margin-right: 45px;
+        font-size: 25px;
+    }
+
+    .hm-nav.media .hm-icon {
+        font-size: 15px;
+        margin-right: 15px
+    }
+
+    .hm-nav.media li {
+        display: block;
+        font-size: xx-small;
+        list-style-type: none;
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        /*width: 100vh;*/
+    }
+
+    .hm-nav.media .hm-container {
+        display: block;
+        padding: 40px 0;
+        /*check*/
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        /*justify-content: space-around; /*if use, content stay up */
+        /*flex-wrap: wrap !important;*/
+    }
+}
+
+
+
