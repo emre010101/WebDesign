@@ -6,7 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css"/> <!--Main Css-->
-    <link rel="stylesheet" href="bootstrap-iso.css"/>
+    <link rel="stylesheet" href="css/bootstrap-iso.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>KometCare - Contact us</title>
     <!-- Navbar icon -->
@@ -53,11 +53,13 @@
                         <label for="fullname">FullName:</label>
                         <input type="text" class="form-control" id="fullname" placeholder="Enter name">
                     </div>
+                    <!--input type "tel" and a pattern were used to import the format-->
                     <div class="form-group">
                         <label for="phone">PhoneNumber:</label>
                         <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone"
                                placeholder="xxx-xxx-xxxx">
                     </div>
+                    <!--input type "email" was used to import the format-->
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email" placeholder="Enter email">
