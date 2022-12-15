@@ -315,9 +315,7 @@ div.visa-box:not(:last-child):hover {
 .card:hover {
   opacity: 0.4;
    transform: scale(1.05);
- }
-
-
+}
 
 .card-wrapper {
   margin-top: 200px;
@@ -421,8 +419,14 @@ div.visa-box:not(:last-child):hover {
   .gi-body {
     background-image: url('https://images.unsplash.com/photo-1543333995-a78aea2eee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-size:cover;
-  
 }
+}
+
+@media screen and (max-width: 575px) {
+  /* Responsive text size in card text section when screen get smaller */
+  .card-wrapper {
+    margin-top: 80px;
+  }
 }
 
  
