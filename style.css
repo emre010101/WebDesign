@@ -413,7 +413,17 @@ div.visa-box:not(:last-child):hover {
     background-image: url('https://images.unsplash.com/photo-1543333995-a78aea2eee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
     background-size:auto;
   
-}}
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* Responsive text size in card text section when screen get smaller */
+  .gi-body {
+    background-image: url('https://images.unsplash.com/photo-1543333995-a78aea2eee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size:cover;
+  
+}
+}
 
  
 /*-----------------------------------------------------------------------Miso CSS ends---------------------------------------------------------------------------------*/
