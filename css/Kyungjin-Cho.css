@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* when add padding or any border onto an 
+    element, it doesn't actually affect the width of it.*/
+  margin: 0;
+  padding: 0;
+}
+
+/*=====================================
+  Set CSS style for navigation bar
+======================================*/
+
+.hm-body {
+  font-family: 'Mada', sans-serif !important;
+  color: #222;
+  padding-bottom: 10px !important;
+  overflow-x: hidden;
+  z-index: 5;
+}
+
+.hm-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.hm-nav {
+  position: fixed;
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 3214;
+}
+
+.hm-nav .hm-container {
+  display: flex;
+  justify-content: space-between;
+  /*to give space for each item*/
+  align-items: center;
+  padding: 20px 0;
+  /*avoid boostrap apply*/
+  transition: all 0.3s ease-in-out;
+  /*when scrolling it will give nice ease transation effect*/
+}
+
+.hm-nav .hm-ul {
+  display: flex;
+  list-style-type: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hm-nav .hm-a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.hm-nav.active {
+  background: #fff;
+  /*when is page scrolled the color of nav bar will change*/
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hm-nav.active .hm-a {
+  /**/
+  color: #000;
+}
+
+.hm-nav.active .hm-container {
+  /*when it's not displaying padding will be smaller*/
+  padding: 10px 0 !important;
+}
+
+.hm-nav a.current,
+.hm-nav .hm-a:hover {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.hm-container .hm-icon {
+  display: none;
+}
+
+/*=====================================
+  Set CSS style for main contents
+======================================*/
+
+/* Set background and element of body */
+.visa-body {
+  background-image: url('../img/kyugnjin-visa-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: -2;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: 'Mada', sans-serif;
+}
+
+/* Set bacground and size of body */
+.visa-body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Create fadeIn effect for eligibility-requirement page and employment page */
+@keyframes fadeIn {
+  from {
+    /* Set position(initial location) */
+    transform: translateY(10px);
+    /* Set opacity(invisible) */
+    opacity: 0;
+  }
+  to {
+    /* Move contents into original location  */
+    transform: none;
+    /* Set opacity(visible) */
+    opacity: 1;
+  }
+}
+
+/* Set background and element of text box */
+.visa-content {
+  /* Set background and border-radius of text box */
+  background-color:rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  /* Set position and size of text box */
+  margin: 30px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
+  height: 70%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* Set position of text inside text box */
+  text-align: center;
+  /* Set font color as white */
+  color: whitesmoke;
+  /* Set overflow(Scroll bar) as auto for mobile screen size */
+  overflow: auto;
+  /* Apply fadeIn effect to main-box once */
+  animation: fadeIn 0.8s linear;
+}
+
+/* Create cursor effect for main box title */
+@keyframes cursorAnimation {
+  0%, 100% { 
+    /* Set border-color(cursor) */
+    border-color: whitesmoke; 
+  }
+}
+
+@keyframes typeAnimation {
+  0% { 
+    /* Set width of text area(invisible) */
+    width: 0; 
+  }
+  100% { 
+    /* Set width of text area(visible) */
+    width: 18ch; 
+    /* Set font color of text area */
+    color: tomato;
+  }
+}
+
+/* Set size and position of title */
+.visa-h1 {
+  /* Set position and size of title */
+  margin: 10px 0px 10px 0px;
+  width: 18ch;
+  /* Prevent line-break */
+  display: inline-block;
+  white-space: nowrap;
+  /* Prevent overflow(Scroll bar) */
+  overflow: hidden;
+  /* Set right side border of title(for animation effect) */
+  border-right: 3px solid whitesmoke;
+  /* Apply cursor effect to title infinitely */
+  animation: cursorAnimation 1s step-start infinite, 
+  typeAnimation 5s steps(19) alternate infinite;
+}
+
+/* Set upperside margin of text box */
+.visa-palet {
+  margin-top: 15px;
+}
+
+/* Set size and position of text */
+.visa-box {
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 5px solid tomato;
+}
+
+
+.visa-box:last-child {
+  /* Remove left side border of button box */
+  border: none;
+  /* Set position of button box */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set bottom side margin of text area */
+.visa-box:nth-child(5) {
+  margin-bottom: 30px;
+}
+
+/* Set font size and alignment of contents */
+.visa-p {
+  /* Set font size of contents */
+  font-size: 20px;
+  /* Set text alignment of contents */
+  text-align: left;
+  /* Set spacing of contents */
+  line-height: 150%;
+}
+
+/* Set font size of first letter bigger */
+p.visa-p:first-letter {
+  font-size: 25px;
+}
+
+
+/* Remove decoration of link */
+.visa-body a {
+  /* Remove underline */
+  text-decoration: none;
+  /* Remove color */
+  color: inherit;
+}
+
+/* Set position and size of link button */
+.visa-button{
+  /* Set background, size and display of link button */
+  margin-top: 5px;
+  background:tomato;
+  border:none;
+  position:relative;
+  height:50px;
+  width: 300px;
+  padding:0 5px;
+  outline:none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set font color, font size of link button */
+  color:whitesmoke;
+  font-size:20px;
+  /* Set cursor of link button */
+  cursor:pointer;
+  /* Set transition for effect */
+  transition:800ms ease all;
+  /* Apply fadeIn effect to main-box once */
+  animation: fadeIn 0.8s linear;
+}
+
+/* Set hover effect of link button */
+.visa-button:hover{
+  /* Set backgruond color and fontstyle of link button */
+  background:rgba(0, 0, 0, 0.4);
+  color:tomato;
+  font-weight: bolder;
+}
+
+/* Set before and after of lint button */
+.visa-button:before,
+.visa-button:after{
+  /* Set background color and position of lint button */
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: tomato;
+  /* Set transition for effect */
+  transition:500ms ease all;
+}
+
+/* Set before and after of lint button */
+.visa-button:after{
+  /* Set position for effect */
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+/* Set before and after of lint button(hover) */
+.visa-button:hover:before,
+.visa-button:hover:after{
+  /* Set width for effect */
+  width:100%;
+  /* Set transition for effect */
+  transition:800ms ease all;
+}
+
+
+
+
+
+/* When the screen is less than 920 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 920px) {
+  ul li:not(:last-child) {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hm-nav .hm-icon {
+    display: block !important;
+    color: rgb(220,20,60);
+    width: 25px;
+    height: 25px;
+    margin-right: 45px;
+    font-size: 25px;
+  }
+
+  .hm-nav.media .hm-icon {
+    font-size: 15px;
+    margin-right: 15px
+  }
+
+  .hm-nav.media li {
+    display: block;
+    font-size: xx-small;
+    list-style-type: none;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*width: 100vh;*/
+  }
+
+  .hm-nav.media .hm-container {
+    display: block;
+    padding: 40px 0;
+    /*check*/
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*justify-content: space-around; /*if use, content stay up */
+    /*flex-wrap: wrap !important;*/
+  }
+  .visa-content {
+    /* Increase height and margin-top considering main-box width and nav-bar width */
+    height: 75%;
+    margin-top: 60px;
+  }
+
+  .visa-p {
+    /* Decrease font size of contents */
+    font-size: 14px;
+  }
+  
+  p.visa-p:first-letter {
+    /* Decrease font size of first letter */
+    font-size: 20px;
+  }
+
+  .visa-h1 {
+    /* Decrease font size of title */
+    font-size: 20px;
+  }
+
+  .visa-button{
+    /* Decrease size and font size of button */
+    width: 100px;
+    font-size: 14px;
+  }
+}
