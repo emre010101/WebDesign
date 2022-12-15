@@ -17,8 +17,8 @@
      font-family: 'Mada', sans-serif !important;
      color: #222;
      padding-bottom: 10px !important;
-     overflow-x: hidden;
-     z-index: 5;
+     overflow-x: hidden; /**/
+     z-index: 5; /**/
  }
  
  .hm-container {
@@ -27,7 +27,7 @@
  }
  
  .hm-nav {
-     position: fixed;
+     position: fixed;  /*This will keep the nav bar on the even the page it's scrolled*/
      background-color: #222;
      top: 0;
      left: 0 ;
@@ -37,7 +37,7 @@
  }
  
  .hm-nav .hm-container {
-     display: flex ;
+     display: flex ; /*in order to get list items flex in the container*/
      justify-content: space-between; /*to give space for each item*/
      align-items: center;
      padding: 20px 0; /*avoid boostrap apply*/
@@ -73,17 +73,17 @@
  
  .hm-nav a.current, 
  .hm-nav .hm-a:hover {
-     color: #c0392b;
-     font-weight: bold;
+     color: #c0392b; /*When its mouseover or it's current page the color will change*/
+     font-weight: bold; /*and it will be bold*/
  }
  .hm-container .hm-icon{
-     display: none;
+     display: none; /*if the size it's big enough to display everything in the nav bar there is no need to display the button*/
  }
  
  /* When the screen is less than 920 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the topnav (.icon) */
  @media screen and (max-width: 920px) {
-     ul li:not(:last-child) {
-         display: none;
+     ul li:not(:last-child) { /*which is the button*/
+         display: none; 
          transition: all 0.3s ease-in-out;    
      }
      
@@ -97,12 +97,12 @@
      }
  
      .hm-nav.media .hm-icon{
-         font-size: 15px;
+         font-size: 15px; 
          margin-right: 15px
      }
      .hm-nav.media li{
          display: block;
-         font-size: xx-small;
+         font-size: xx-small; /*changing the font style so as to get everything fits in the small screens*/
          list-style-type: none;
      }
  
@@ -116,7 +116,7 @@
  .hm-hero {
      background-image: url('https://images.unsplash.com/photo-1543333995-a78aea2eee50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
      height: 100vh;
-     background-repeat: no-repeat;
+     background-repeat: no-repeat; /*made the background responsive*/
      background-size: cover;
      background-position: bottom center;
      color: #fff;
@@ -130,7 +130,7 @@
  }
  
  .hm-hero::before {
-     content: '';
+     content: '';  /*when before is used, content property have to be used*/
      position: absolute;
      top: 0;
      left: 0;
@@ -184,7 +184,7 @@
  /*------Visa Requirements----------------*/
  .visa-body{
   font-family: 'Mada', sans-serif;
-  background-image: url('/img/healthcare.jpeg');
+  background-image: url('./img/healthcare.jpeg');
   height: 100vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
