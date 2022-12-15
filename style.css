@@ -356,6 +356,11 @@ div.visa-box:not(:last-child):hover {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .card {
+    width: 95%;
+  }
+}
  
 
 @media screen and (max-width: 920px) {
@@ -365,6 +370,11 @@ div.visa-box:not(:last-child):hover {
     font-size: 10px;
 }}
 
+@media screen and (max-width: 575px) {
+  .card {
+    font-size: 7px;
+  }
+}
 @media screen and (max-width: 920px) {
 
   /* Responsive text size in card title section when screen get smaller */
@@ -372,11 +382,27 @@ div.visa-box:not(:last-child):hover {
     font-size: 7px;
 }}
 
+@media screen and (max-width: 575px) {
+
+  /* Responsive text size in card title section when screen get smaller */
+  .card-text {
+    font-size: 4px;
+}}
+
 @media screen and (max-width: 920px) {
   /* Responsive text size in button of card section when screen get smaller */
   .mt-auto {
     font-size: 8px;
     width: 120%;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* Responsive text size in button of card section when screen get smaller */
+  .mt-auto {
+    font-size: 4px;
+    width: 95%;
     align-self: center;
   }
 }
