@@ -425,7 +425,7 @@ div.visa-box:not(:last-child):hover {
 @media screen and (max-width: 575px) {
   /* Responsive text size in card text section when screen get smaller */
   .card-wrapper {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 
