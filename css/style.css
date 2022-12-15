@@ -268,8 +268,9 @@ div.visa-box:not(:last-child):hover {
   margin-top: 10px  ;
 }
 .visa-button {
-  background-color: rgb(215, 179, 179);
+  /* background-color: rgb(215, 179, 179); */
   color: white;
+  background-color: rgb(185, 9, 9);
   padding: 20px 25px;
   border-radius: 8px;
   height: auto;
@@ -279,7 +280,8 @@ div.visa-box:not(:last-child):hover {
   transition: ease-in-out 0.3s;
 }
 .visa-button:hover {
-  background-color: rgb(185, 9, 9);
+  background-color: white;
+  color: #000;
 }
 
 .visa-button:active {
