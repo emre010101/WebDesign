@@ -107,6 +107,7 @@
     }
   }
 
+/* Set background and element of body */
 .visa-body {
     position: relative;
     min-height: 100vh;
@@ -115,10 +116,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(img/visa-irene2.jpg);
+    background: url(img/visa-irene.jpg);
     background-size: cover;
 }
-
+/* Set bacground and size of body */
 .visa-body::before {
     content: '';
     position: fixed;
@@ -130,16 +131,11 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
 }
-/*
-h1{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
- */
+
 .visa-content {
     padding-top: 40px;
 }
+/* Set size and position of title */
 
 .visa-body h1{
     text-align: center;
@@ -148,6 +144,7 @@ h1{
 .visa-body p {
     color: white;
 }
+/* Set size and position of button */
 .visa-body button{
     width: 180px;
     color: #000;
@@ -160,7 +157,7 @@ h1{
     text-decoration: none;
     margin-top: 30px;
 }
-
+/* Set the format of four boxes */
 .box1,.box2,.box3,.box4 {
     width: 200px;
     height: 230px;
@@ -177,6 +174,7 @@ h1{
 .box5 {
     padding-top: 60px;
 }
+/* hover was used on the first four boxes */
 .box1:hover {
     transform: translateY(-10px);
 }
