@@ -11,7 +11,7 @@
      element, it doesn't actually affect the width of it.*/
      margin: 0;
      padding: 0;
-     font-family: 'Mada', sans-serif !important;
+     
  }
  
  .hm-body {
@@ -644,6 +644,10 @@ nanati.me. (2016). css 버튼 디자인 모음 │ NANATI’s STORY. [online] Av
 /* CSS Style of Employment Page */
 
 /* Set background and element of body */
+.fa,.fab,.fad,.fal,.far,.fas{
+	font-weight: 900 !important;
+}
+
 #employment {
   /* Set background of employment page */
   background-image: url('../img/bg-employment.png');
@@ -898,6 +902,7 @@ adding style to the about us page
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Mada', sans-serif !important;
     background: url('../img/sl-image8.jpg');
     background-size: cover;
 
@@ -995,6 +1000,7 @@ hover means when you put your cursor over it
     align-items: center;
     flex-direction: column;
     background: url('../img/contact-us.jpg');
+    font-family: 'Mada', sans-serif !important;
     background-size: cover;
 }
 #contact-us::before {
