@@ -89,7 +89,7 @@
      
      .hm-nav .hm-icon{
          display: block !important;
-         color: #fff;
+         color: rgb(220,20,60);
          width: 25px;
          height: 25px;
          margin-right: 45px;
@@ -104,17 +104,12 @@
          display: block;
          font-size: xx-small;
          list-style-type: none;
-         /*align-items: center;*/
-         /*justify-content: center;*/
-         /*width: 100vh;*/
      }
  
      .hm-nav.media .hm-container{
          display: block;
          padding: 40px 0; /*check*/
          transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-         /*justify-content: space-around; /*if use, content stay up */
-         /*flex-wrap: wrap !important;*/
      }
    }
  
@@ -188,147 +183,113 @@
 
  /*------Visa Requirements----------------*/
  .visa-body{
-  background-color: #AFEEEE;
-    background-image: url('https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=981&q=80');  
-    height: 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: -2;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    font-family: 'Mada', sans-serif;
- }
+  font-family: 'Mada', sans-serif;
+  background-image: url('/img/healthcare.jpeg');
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
 
- .visa-body::before {
+.visa-body::before {
   content: '';
   position: fixed;
-  background-attachment: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   z-index: -1;
 }
 
-.visa-h1 {
-  margin-top: 20px;
-  display: relative;
-}
-
-.visa-p{
-  color: #000;
-  
-}
-.visa-palet {
-  display: flex;
-  height: auto;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.visa-content {
+  padding-top: 80px;
+  flex-direction: column;
   align-items: center;
 }
 
-.visa-box {
-  border-radius: 10px;
-  margin-top: 10%;
+@media (min-width: 920px) {
+  .visa-content {
+    flex-direction: row;
+  }
 }
 
-.visa-box.box1, .visa-box.box2, .visa-box.box3 {
-  height: auto;
-  margin: 25px;
+.visa-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  background-color: rgba(191, 191, 191, 0.895);
+.visa-palet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+div.visa-box:not(:last-child) {
+  width: 60%;
+  height: auto;
+  background-color: #eee;
+  opacity: 0.8;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+div.visa-box:not(:last-child):hover {
+  background-color: rgb(230, 197, 197);
   opacity: 0.9;
-  padding: 16px;
 }
 
-.visa-box.box4, .visa-box.box5 {
-  height: auto;
-  width: 40%;
-  margin: 25px;
-  background-color: rgba(191, 191, 191, 0.895);
-  padding: 28px;
-}
-
-.visa-content{
-  position: relative;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  padding: 5%;
-  max-height: 1200px;
-}
-
-.box1 {
-  order: 1;
-}
-.box2 {
-  order: 2;
-}
-.box3 {
-  order: 3;
-}
-.box4 {
-  order: 4;
-}
-.box5 {
-  order: 6;
-}
-.box6 {
-  order: 5;
-}
-
+ 
 .visa-p {
-  display: relative;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 5px;
 }
 
 .visa-button {
-    background-color: #c0392b ;
-    color: #fff ;
-    border: 1px #0392;
-    font-size: 10px;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    margin: 10px 10px;
-    border-radius: 75px;
+  background-color: rgb(230, 197, 197);
+  color: white;
+  padding: 20px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.visa-button:hover {
+  background-color: rgb(185, 9, 9);
+}
+
+.visa-button:active {
+  transform: translateY(2px);
 }
 
 .visa-button:focus {
-    outline: none;
+  outline: none;
 }
 
-.visa-button:hover {
-    background-color: #fff;
-    color: #000;
-    transition: 0.3 ease-in-out;
-    opacity: 0.5 !important;
-    
-} 
+.visa-button a {
+  color: black;
+  text-decoration: none;
+  font-size: auto;
+  text-shadow: rgba(0, 0, 0, 0.5);
+}
 
-@media (max-width: 1340px) {
-  .box1, .box2, .box3, .box4, .box5, .box6 {
-    order: initial;
-    flex-shrink: 1;
-  }
-
-  .visa-content{
-    overflow-y: scroll;
-  }
-
-  .visa-palet {
-    display: flex;
-    flex-direction: column;
-  }
-
+.hm-container .hm-icon{
+  display: none;
 }
 
 

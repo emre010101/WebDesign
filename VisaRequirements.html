@@ -8,14 +8,14 @@ Visa Requirements Page -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/x-icon" href="img/logo.png">
-        <link rel="stylesheet" href="bootstrap-iso.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-        <link rel="stylesheet" href="style.css" />
+        <!-- <link rel="stylesheet" href="bootstrap-iso.css" /> It was meant to be used -->
+       
+        <!-- Main css -->
+        <link rel="stylesheet" href="style.css" />  
         <!-------------------------
           External CSS Files
         -------------------------->
-        
+        <!-- <link rel="stylesheet" href="EmreKavak.css" /> -->
         <!-- <link rel="stylesheet" href="JIAYUMENG.css" /> -->
         <!-- <link rel="stylesheet" href="Kyungjin-Cho.css"> -->
         <!-- <link rel="stylesheet" href="Miseong_Kang.css"> -->
@@ -82,6 +82,15 @@ Visa Requirements Page -->
         </div>
 
         <script src="js/script.js"></script> 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
+        <script>
+            $(window).resize(function() {
+            $('.visa-box').fadeOut(function() {
+                // Update the element's display based on the new screen size
+                $('.visa-box').fadeIn();
+            });
+            });
+        </script>
     </body>
 
 </html>
