@@ -148,7 +148,7 @@ h1{
 .visa-body p {
     color: white;
 }
-.visa-body button{
+.visa-body .visa-button{
     width: 180px;
     color: #000;
     font-size: 12px;
