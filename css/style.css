@@ -3,7 +3,6 @@
  *Css applied to nav bar, home page and Visa Requirement Page
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans');
  @import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
 
  *{
@@ -15,9 +14,9 @@
  }
  
  .hm-body {
-     font-family: 'Mada', sans-serif !important;
+     font-family: 'Mada', sans-serif;
      color: #222;
-     padding-bottom: 10px !important;
+     padding-bottom: 10px;
      overflow-x: hidden; /**/
      z-index: 5; /**/
  }
@@ -162,11 +161,13 @@
     flex: 0.6;
     margin: 10px; /*seperating them to each other*/
     position: relative; /**/
-    transform: flex 0.7 ease-in;
+    
 }
 
 .hm-panel.active {
     flex: 4;
+    transform: scale(1.07);
+    z-index: 1;
 }
 
 @media (max-width: 920px) {
@@ -177,7 +178,7 @@
     .hm-panel:nth-of-type(4),
     .hm-panel:nth-of-type(5){
         display: none; /*when the screen small it wont display 4th nd 5th*/
-        transition: all 0.3 ease-in-out;
+        transition: all 0.5s ease;
     }
 }
 
