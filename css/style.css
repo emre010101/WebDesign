@@ -449,7 +449,7 @@ div.visa-box:not(:last-child):hover {
 /* Set background and element of body */
 #eligibility-requirement {
   /* Set background of eligibility-requirement page */
-  background-image: url('../img/bg-eligibility.png');
+  background-image: url('../img/webp.images/bg-eligibility.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -653,7 +653,7 @@ nanati.me. (2016). css 버튼 디자인 모음 │ NANATI’s STORY. [online] Av
 
 #employment {
   /* Set background of employment page */
-  background-image: url('../img/bg-employment.png');
+  background-image: url('../img/webp.images/bg-employment.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
