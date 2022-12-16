@@ -906,7 +906,7 @@ adding style to the about us page
     align-items: center;
     flex-direction: column;
     font-family: 'Mada', sans-serif !important;
-    background: url('../img/webp.images/sl-image8.webp');
+    background: url('../img/sl-image8.webp');
     background-size: cover;
 
 }
@@ -1002,7 +1002,7 @@ hover means when you put your cursor over it
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url('../img/webp.images/contact-us.webp');
+    background: url('../img/contact-us.webp');
     font-family: 'Mada', sans-serif !important;
     background-size: cover;
 }
