@@ -93,7 +93,7 @@
 
 /* Set background and element of body */
 .visa-body {
-  background-image: url('../img/webp.images/kyugnjin-visa-bg.webp');
+  background-image: url('../img/kyugnjin-visa-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
